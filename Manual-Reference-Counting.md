@@ -44,6 +44,8 @@ Answer the following questions inline with this document.
 
 3. Explain when you need to use the `NSAutoreleasePool`.
 
+Whenever I'm looping. 
+
 
 4. Implement a convenience `class` method to create a `LSIPerson` object that takes a `name` property and returns an autoreleased object.
 
