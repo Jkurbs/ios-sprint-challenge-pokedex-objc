@@ -6,13 +6,13 @@
 //  Copyright © 2020 Kerby Jean. All rights reserved.
 //
 
-#import "PokemonViewController.h"
+#import "POPokemonTableViewController.h"
 
-@interface PokemonViewController ()
+@interface POPokemonTableViewController ()
 
 @end
 
-@implementation PokemonViewController
+@implementation POPokemonTableViewController
 
 static NSString * const reuseIdentifier = @"Cell";
 
@@ -21,7 +21,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
+    self.collectionView.backgroundColor = UIColor.redColor;
 }
 
 /*
