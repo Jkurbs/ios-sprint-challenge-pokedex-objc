@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class NPTArtist;
 
 @interface POPokemon_NSJSONSerialization : NSObject
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (NSDictionary *)toDictionary;
+
 @end
 
-NS_ASSUME_NONNULL_END
+
