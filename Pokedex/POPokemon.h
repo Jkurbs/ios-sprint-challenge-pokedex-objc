@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface POPokemon : NSObject
+@interface POPokemon : NSObject <NSCoding>
 
 @property (nonatomic, readonly, copy) NSString *name;
 @property (nonatomic, readonly) NSNumber *id;
