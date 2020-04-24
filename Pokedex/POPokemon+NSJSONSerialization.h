@@ -6,11 +6,9 @@
 //  Copyright © 2020 Kerby Jean. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@class POPokemon;
 
-@class NPTArtist;
-
-@interface POPokemon_NSJSONSerialization : NSObject
+@interface POPokemon (NSJSONSerialization)
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 - (NSDictionary *)toDictionary;

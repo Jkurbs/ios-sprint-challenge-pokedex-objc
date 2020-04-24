@@ -8,16 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface POPokemon : NSObject
 
 @property (nonatomic, readonly, copy) NSString *name;
-@property (nonatomic, readonly) NSInteger *id;
+@property (nonatomic, readonly) NSNumber *id;
 @property (nonatomic, readonly) NSArray *abilities;
 
-- (instancetype)initWithName:(NSString *)name id:(NSInteger *)id abilities:(NSArray *)abilities;
+- (instancetype)initWithName:(NSString *)name id:(NSNumber *)id abilities:(NSArray *)abilities;
 
 @end
-
-NS_ASSUME_NONNULL_END

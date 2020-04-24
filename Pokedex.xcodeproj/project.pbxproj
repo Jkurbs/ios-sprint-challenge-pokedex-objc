@@ -67,8 +67,8 @@
 		6DA26D7524534A1300AFFC3F /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
-				6DA26D9424534E2A00AFFC3F /* Pokemon+JSONSerialization */,
 				6DA26D8F24534A5300AFFC3F /* Model */,
+				6DA26D9424534E2A00AFFC3F /* Pokemon+JSONSerialization */,
 				6DA26D7624534A1300AFFC3F /* AppDelegate.h */,
 				6DA26D7724534A1300AFFC3F /* AppDelegate.m */,
 				6DA26D7924534A1300AFFC3F /* SceneDelegate.h */,

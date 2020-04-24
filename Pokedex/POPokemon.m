@@ -10,7 +10,7 @@
 
 @implementation POPokemon
 
-- (instancetype)initWithName:(NSString *)name id:(NSInteger *)id abilities:(NSArray *)abilities {
+- (instancetype)initWithName:(NSString *)name id:(NSNumber *)id abilities:(NSArray *)abilities {
     self = [super init];
     if (self) {
         _name = name;
