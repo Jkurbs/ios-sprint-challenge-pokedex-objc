@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSInteger *id;
 @property (nonatomic, readonly) NSArray *abilities;
 
+- (instancetype)initWithName:(NSString *)name id:(NSInteger *)id abilities:(NSArray *)abilities;
 
 @end
 
