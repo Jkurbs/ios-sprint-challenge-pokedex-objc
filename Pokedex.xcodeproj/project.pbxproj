@@ -14,6 +14,7 @@
 		6DA26D8324534A1700AFFC3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DA26D8224534A1700AFFC3F /* Assets.xcassets */; };
 		6DA26D8624534A1700AFFC3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DA26D8424534A1700AFFC3F /* LaunchScreen.storyboard */; };
 		6DA26D8924534A1700AFFC3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA26D8824534A1700AFFC3F /* main.m */; };
+		6DA26D9224534A7100AFFC3F /* POPokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA26D9124534A7100AFFC3F /* POPokemon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		6DA26D8524534A1700AFFC3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DA26D8724534A1700AFFC3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DA26D8824534A1700AFFC3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6DA26D9024534A7100AFFC3F /* POPokemon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POPokemon.h; sourceTree = "<group>"; };
+		6DA26D9124534A7100AFFC3F /* POPokemon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POPokemon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 		6DA26D7524534A1300AFFC3F /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				6DA26D8F24534A5300AFFC3F /* Model */,
 				6DA26D7624534A1300AFFC3F /* AppDelegate.h */,
 				6DA26D7724534A1300AFFC3F /* AppDelegate.m */,
 				6DA26D7924534A1300AFFC3F /* SceneDelegate.h */,
@@ -74,6 +78,15 @@
 				6DA26D8824534A1700AFFC3F /* main.m */,
 			);
 			path = Pokedex;
+			sourceTree = "<group>";
+		};
+		6DA26D8F24534A5300AFFC3F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6DA26D9024534A7100AFFC3F /* POPokemon.h */,
+				6DA26D9124534A7100AFFC3F /* POPokemon.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DA26D9224534A7100AFFC3F /* POPokemon.m in Sources */,
 				6DA26D7E24534A1300AFFC3F /* ViewController.m in Sources */,
 				6DA26D7824534A1300AFFC3F /* AppDelegate.m in Sources */,
 				6DA26D8924534A1700AFFC3F /* main.m in Sources */,
