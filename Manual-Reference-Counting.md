@@ -10,6 +10,7 @@ Answer the following questions inline with this document.
 	NSCharacterSet *punctuationSet = [[NSCharacterSet punctuationCharacterSet] retain];
 
 	NSString *cleanQuote = [[quote componentsSeparatedByCharactersInSet:punctuationSet] componentsJoinedByString:@""];
+        [punctuationSet release];
 	NSArray *words = [[cleanQuote lowercaseString] componentsSeparatedByString:@" "];
 
 	NSMutableDictionary<NSString *, NSNumber *> *wordFrequency = [[NSMutableDictionary alloc] init];
