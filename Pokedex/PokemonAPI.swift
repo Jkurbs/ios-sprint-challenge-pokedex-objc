@@ -8,31 +8,12 @@
 
 import UIKit
 
-enum NetworkError: Error {
-    case networkError
-    case badURL
-    case noData
-    case decoderError
-}
-
-enum BaseURL: String, CustomStringConvertible {
-    case pokemon
-    case abilities
-    
-    var description: String {
-        switch self {
-        case .pokemon:
-            return "https://pokeapi.co/api/v2/pokemon/"
-        case .abilities:
-            return "https://pokeapi.co/api/v2/ability/"
-        }
-    }
-}
-
 class PokemonAPI: NSObject {
 
     @objc(sharedController) static let shared = PokemonAPI()
-
+    
+    var pokemon = [POPokemon]()
+    
     @objc func fetchAllPokemon(completion: @escaping ([POPokemon]?, Error?) -> Void) {
         
         var id = 0
@@ -54,8 +35,6 @@ class PokemonAPI: NSObject {
                     completion(nil, NetworkError.noData)
                     return
                 }
-                
-                print("DATA RETURNED: \(data)")
                 
                 do {
                     let dictionary = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]

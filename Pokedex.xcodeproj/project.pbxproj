@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D4A3E9E24536358002F570D /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4A3E9D24536358002F570D /* Enum.swift */; };
 		6D71ECB0245353F8006F12CC /* PokemonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71ECAF245353F8006F12CC /* PokemonAPI.swift */; };
 		6D71ECB924535C8C006F12CC /* POPokemonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D71ECB824535C8C006F12CC /* POPokemonTableViewController.m */; };
 		6DA26D7824534A1300AFFC3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA26D7724534A1300AFFC3F /* AppDelegate.m */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D4A3E9D24536358002F570D /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		6D71ECAE245353F7006F12CC /* Pokedex-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pokedex-Bridging-Header.h"; sourceTree = "<group>"; };
 		6D71ECAF245353F8006F12CC /* PokemonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAPI.swift; sourceTree = "<group>"; };
 		6D71ECB724535C8C006F12CC /* POPokemonTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POPokemonTableViewController.h; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D4A3E9924536310002F570D /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				6D4A3E9D24536358002F570D /* Enum.swift */,
+			);
+			name = Constant;
+			sourceTree = "<group>";
+		};
 		6D71ECAA245352B6006F12CC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 		6DA26D7524534A1300AFFC3F /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				6D4A3E9924536310002F570D /* Constant */,
 				6D71ECB124535BE0006F12CC /* ViewController */,
 				6D71ECAA245352B6006F12CC /* Controller */,
 				6DA26D8F24534A5300AFFC3F /* Model */,
@@ -204,6 +215,7 @@
 				6D71ECB924535C8C006F12CC /* POPokemonTableViewController.m in Sources */,
 				6DA26D7824534A1300AFFC3F /* AppDelegate.m in Sources */,
 				6DA26D8924534A1700AFFC3F /* main.m in Sources */,
+				6D4A3E9E24536358002F570D /* Enum.swift in Sources */,
 				6DA26D9724534E6300AFFC3F /* POPokemon+NSJSONSerialization.m in Sources */,
 				6D71ECB0245353F8006F12CC /* PokemonAPI.swift in Sources */,
 				6DA26D7B24534A1300AFFC3F /* SceneDelegate.m in Sources */,
