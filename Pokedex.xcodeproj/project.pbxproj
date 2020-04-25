@@ -16,7 +16,9 @@
 		6DA26D8624534A1700AFFC3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DA26D8424534A1700AFFC3F /* LaunchScreen.storyboard */; };
 		6DA26D8924534A1700AFFC3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA26D8824534A1700AFFC3F /* main.m */; };
 		6DA26D9224534A7100AFFC3F /* POPokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA26D9124534A7100AFFC3F /* POPokemon.m */; };
-		6DFB70DF24546EA1002BBFD3 /* PokemonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFB70DE24546EA1002BBFD3 /* PokemonAPI.swift */; };
+		6DC1707D2454771F00023E02 /* PokemonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC1707C2454771F00023E02 /* PokemonDetailViewController.swift */; };
+		6DC1708024547AD800023E02 /* POAbility.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC1707F24547AD800023E02 /* POAbility.m */; };
+		6DC170822454837100023E02 /* PokemonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC170812454837100023E02 /* PokemonAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +37,11 @@
 		6DA26D8824534A1700AFFC3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6DA26D9024534A7100AFFC3F /* POPokemon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POPokemon.h; sourceTree = "<group>"; };
 		6DA26D9124534A7100AFFC3F /* POPokemon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POPokemon.m; sourceTree = "<group>"; };
+		6DC1707C2454771F00023E02 /* PokemonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailViewController.swift; sourceTree = "<group>"; };
+		6DC1707E24547AD800023E02 /* POAbility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POAbility.h; sourceTree = "<group>"; };
+		6DC1707F24547AD800023E02 /* POAbility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POAbility.m; sourceTree = "<group>"; };
+		6DC170812454837100023E02 /* PokemonAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonAPI.swift; sourceTree = "<group>"; };
 		6DFB70DD24546DF1002BBFD3 /* Pokedex-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pokedex-Bridging-Header.h"; sourceTree = "<group>"; };
-		6DFB70DE24546EA1002BBFD3 /* PokemonAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PokemonAPI.swift; path = ../../../../.Trashes/501/PokemonAPI.swift; sourceTree = "<group>"; };
-		6DFB70E124546EBF002BBFD3 /* PokemonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			children = (
 				6D71ECB724535C8C006F12CC /* POPokemonTableViewController.h */,
 				6D71ECB824535C8C006F12CC /* POPokemonTableViewController.m */,
+				6DC1707C2454771F00023E02 /* PokemonDetailViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -110,7 +115,9 @@
 			children = (
 				6DA26D9024534A7100AFFC3F /* POPokemon.h */,
 				6DA26D9124534A7100AFFC3F /* POPokemon.m */,
-				6DFB70DE24546EA1002BBFD3 /* PokemonAPI.swift */,
+				6DC1707E24547AD800023E02 /* POAbility.h */,
+				6DC1707F24547AD800023E02 /* POAbility.m */,
+				6DC170812454837100023E02 /* PokemonAPI.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -118,7 +125,6 @@
 		6DFB70E024546EB4002BBFD3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6DFB70E124546EBF002BBFD3 /* PokemonAPI.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -197,9 +203,11 @@
 				6DA26D9224534A7100AFFC3F /* POPokemon.m in Sources */,
 				6D71ECB924535C8C006F12CC /* POPokemonTableViewController.m in Sources */,
 				6DA26D7824534A1300AFFC3F /* AppDelegate.m in Sources */,
-				6DFB70DF24546EA1002BBFD3 /* PokemonAPI.swift in Sources */,
+				6DC1708024547AD800023E02 /* POAbility.m in Sources */,
 				6DA26D8924534A1700AFFC3F /* main.m in Sources */,
+				6DC1707D2454771F00023E02 /* PokemonDetailViewController.swift in Sources */,
 				6D4A3E9E24536358002F570D /* Enum.swift in Sources */,
+				6DC170822454837100023E02 /* PokemonAPI.swift in Sources */,
 				6DA26D7B24534A1300AFFC3F /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

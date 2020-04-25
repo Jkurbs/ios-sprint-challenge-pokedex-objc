@@ -4,3 +4,4 @@
 
 
 #import "POPokemon.h"
+#import "POAbility.h"

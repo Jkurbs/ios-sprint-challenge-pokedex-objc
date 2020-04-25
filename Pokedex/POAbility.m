@@ -1,14 +1,14 @@
 //
-//  POPokemon.m
+//  POAbility.m
 //  Pokedex
 //
-//  Created by Kerby Jean on 4/24/20.
+//  Created by Kerby Jean on 4/25/20.
 //  Copyright © 2020 Kerby Jean. All rights reserved.
 //
 
-#import "POPokemon.h"
+#import "POAbility.h"
 
-@implementation POPokemon
+@implementation POAbility 
 
 - (instancetype)initWithName:(NSString *)name
 {
@@ -19,11 +19,12 @@
     return self;
 }
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
     NSString *name = dictionary[@"name"];
     if (!name) { return nil; }
     return [self initWithName:name];
-    
 }
 
 @end

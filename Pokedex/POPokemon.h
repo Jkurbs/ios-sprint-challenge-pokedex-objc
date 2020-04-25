@@ -6,15 +6,21 @@
 //  Copyright © 2020 Kerby Jean. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "POAbility.h"
 
+NS_ASSUME_NONNULL_BEGIN
 
 @interface POPokemon : NSObject
 
-@property (nonatomic, readonly, copy) NSString *name;
-@property (nonatomic, readonly) NSNumber *id;
-@property (nonatomic, readonly) NSArray *abilities;
+@property (nonatomic, copy, readonly )NSString *name;
+@property (nonatomic, readwrite)NSNumber *identifier;
+@property (nonatomic, readwrite)UIImage *pokeImage;
+@property (nonatomic, readwrite, copy)NSArray *abilities;
 
-- (instancetype)initWithName:(NSString *)name id:(NSNumber *)id;
+
+- (instancetype)initWithName:(NSString *)name;
+- (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end
+NS_ASSUME_NONNULL_END

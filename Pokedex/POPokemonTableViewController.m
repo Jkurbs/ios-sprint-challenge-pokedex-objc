@@ -21,7 +21,7 @@
 {
     self = [super initWithCoder:coder];
     if (self) {
-        _controller = [[PokemonAPI alloc]init];
+        
     }
     return self;
 }
@@ -32,16 +32,10 @@
             NSLog(@"Error fetching all pokemon");
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.pokemons = [pokemons mutableCopy];
                 [self.tableView reloadData];
             });
         }
     }];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.tableView reloadData];
 }
 
 
@@ -50,18 +44,24 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.pokemons.count;
+    return PokemonAPI.sharedController.pokemons.count;
 }
 //
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"POPokeCell" forIndexPath:indexPath];
-    POPokemon *pokemon = self.pokemons[indexPath.row];
+    POPokemon *pokemon = PokemonAPI.sharedController.pokemons[indexPath.row];
     cell.textLabel.text = pokemon.name;
     return cell;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    PokemonDetailViewController *detailVC = segue.destinationViewController;
     
+    if ([segue.identifier isEqualToString:@"CellSegue"]) {
+        POPokemon *pokemon = PokemonAPI.sharedController.pokemons[indexPath.row];
+        detailVC.pokemon = pokemon;
+    }
 }
 
 @end

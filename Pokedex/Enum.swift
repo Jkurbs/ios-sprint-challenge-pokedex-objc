@@ -15,15 +15,15 @@ enum NetworkError: Error {
 
 enum BaseURL: String, CustomStringConvertible {
     
+    case general
     case pokemon
-    case abilities
     
     var description: String {
         switch self {
+        case .general:
+            return "https://pokeapi.co/api/v2/pokemon/?limit=1000"
         case .pokemon:
             return "https://pokeapi.co/api/v2/pokemon/"
-        case .abilities:
-            return "https://pokeapi.co/api/v2/ability/"
         }
     }
 }
