@@ -69,14 +69,13 @@ class PokemonAPI: NSObject {
             guard let id = dict["id"] as? NSNumber else { return }
             pokemon.identifier  = id
             
-            // image
             let spritesDictionary = dict["sprites"] as! [String:String?]
             let imageURLString = spritesDictionary["front_default"] as? String
             if let imageURL = URL(string: imageURLString!) {
                 guard let data = try? Data(contentsOf: imageURL) else { return }
                 pokemon.pokeImage = UIImage(data: data)!
             }
-            // abilities
+
             let abilitiesArray = dict["abilities"] as! [[String:Any]]
             for item in abilitiesArray {
                 let ability = item["ability"] as! [String:String]

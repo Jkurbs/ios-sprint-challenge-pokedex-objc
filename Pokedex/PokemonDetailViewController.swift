@@ -50,6 +50,7 @@ class PokemonDetailViewController: UIViewController {
     
     
     private func addObservers() {
+        
         let observerChangeHandler: ((Any, Any) -> Void) = { [weak self] _, _ in
             guard let self = self else { return }
             DispatchQueue.main.async {  self.updateViews()   }
