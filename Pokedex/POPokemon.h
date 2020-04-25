@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 
 
-@interface POPokemon : NSObject <NSCoding>
+@interface POPokemon : NSObject
 
 @property (nonatomic, readonly, copy) NSString *name;
 @property (nonatomic, readonly) NSNumber *id;
 @property (nonatomic, readonly) NSArray *abilities;
 
-- (instancetype)initWithName:(NSString *)name id:(NSNumber *)id abilities:(NSArray *)abilities;
+- (instancetype)initWithName:(NSString *)name id:(NSNumber *)id;
 
 @end

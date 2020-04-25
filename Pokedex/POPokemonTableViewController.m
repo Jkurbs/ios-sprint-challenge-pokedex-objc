@@ -27,16 +27,21 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    [self.controller fetchAllPokemonWithCompletion:^(NSArray<POPokemon *> *pokemon, NSError *error) {
-        
+    [PokemonAPI.sharedController fetchAllPokemonWithCompletion:^(NSArray<POPokemon *> *pokemons, NSError *error) {
+        if (error) {
+            NSLog(@"Error fetching all pokemon");
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.pokemons = [pokemons mutableCopy];
+                [self.tableView reloadData];
+            });
+        }
     }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
-    
 }
 
 
@@ -45,22 +50,18 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.pokemons.count;
 }
 //
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtCell" forIndexPath:indexPath];
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"POPokeCell" forIndexPath:indexPath];
+    POPokemon *pokemon = self.pokemons[indexPath.row];
+    cell.textLabel.text = pokemon.name;
     return cell;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
+    
 }
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-
-}
-
-
 
 @end

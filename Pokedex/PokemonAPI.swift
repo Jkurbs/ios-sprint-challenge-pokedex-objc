@@ -12,7 +12,15 @@ class PokemonAPI: NSObject {
 
     @objc(sharedController) static let shared = PokemonAPI()
     
-    var pokemon = [POPokemon]()
+    var pokemons = [POPokemon]()
+    
+    init() {
+        
+        
+    }
+    
+    
+    
     
     @objc func fetchAllPokemon(completion: @escaping ([POPokemon]?, Error?) -> Void) {
         
@@ -38,7 +46,9 @@ class PokemonAPI: NSObject {
                 
                 do {
                     let dictionary = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                    print("NAME:: \(dictionary?["name"] as! String)")
+                    let name = dictionary?["name"] as? String
+                    let id = dictionary?["id"] as? NSNumber
+                    let pokemon = POPokemon(name: name, id: id)
                 } catch {
                     print(error.localizedDescription)
                 }

@@ -13,6 +13,8 @@
 
 @property PokemonAPI *controller;
 
+@property NSMutableArray *pokemons;
+
 @end
 
 
